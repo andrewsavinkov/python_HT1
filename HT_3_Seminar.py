@@ -52,7 +52,7 @@ is_float(input_line)
         между первой и последней буквой "о" из исходной строки. Если она только одна или её 
         нет - то сообщить, что буква "о" - одна или не встречается.
 """
-text = 'aoskjkskb'
+text = input('Введите строку: ')
 def reverse_substring_between_o(line):
     range_betw_o = line.rfind('o') - line.find('o')
     result=""
