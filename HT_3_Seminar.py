@@ -23,7 +23,7 @@ def count_dots_say_OK(line):    # проверяет, сколько точек 
     else:
         return False
     
-def could_be_number(line):
+def could_be_number(line):      # проверяет, можно ли сконвертировать данную строку в число
     number=""
     for i in range(len(line)):
         number=number+line[i]
