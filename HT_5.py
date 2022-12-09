@@ -31,9 +31,6 @@ sea_shot = [['-' for _ in range(field_size + 1)]
 dic_previous_rnds = {a: 0 for a in range(field_size ** 2)}
 
 
-# текущий счётчик словаря dic_previous_rnds
-
-
 def output_user(field):  # вывод поля в консоль
     print('Ваше поле: ')
     for i in range(len(field)):
@@ -125,7 +122,7 @@ def create_ship_comp():
             count_1s_comp = count_1s_comp + 1
 
 
-def combs(field):
+def combs(field):    #словарь комбинаций координат для стрельбы компьютера
     d = {a: (0, 0) for a in range(field_size ** 2)}
     counter = 0
     for i in range(1, field_size + 1):
