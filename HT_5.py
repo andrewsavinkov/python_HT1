@@ -186,7 +186,7 @@ combins = combs(sea)
 create_ship_comp()
 
 
-while stand_comp < 10 or stand_user < 10:
+while stand_comp < 10 and stand_user < 10:
 
     while count_1_ship < limit_1 or count_2_ship < limit_2 or count_3_ship < limit_3:
         output_user(sea)
