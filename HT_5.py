@@ -145,8 +145,7 @@ def shoot_reached_or_not():  # выстрелы компа.
         (x_shoot, y_shoot) = combins.pop(rnd_key)
         dic_previous_rnds[count] = rnd_key
         count = count + 1
-        print(
-            f'компьютер бьет по координатам: {upper_coordinates[x_shoot-1]}-{y_shoot}')
+        print(f'компьютер бьет по координатам: {upper_coordinates[x_shoot-1]}-{y_shoot}')
         time.sleep(3)
     if sea[x_shoot][y_shoot] == 'X':
         print('попадание!')
@@ -188,6 +187,7 @@ create_ship_comp()
 
 while stand_comp < 10 and stand_user < 10:
 
+
     while count_1_ship < limit_1 or count_2_ship < limit_2 or count_3_ship < limit_3:
         output_user(sea)
         print('Создайте ваши корабли')
@@ -210,6 +210,9 @@ while stand_comp < 10 and stand_user < 10:
     while helping_flag:  # стреляет игрок
         if shoot():
             stand_user = stand_user + 1
+            if stand_user == 10:
+                print(f'Игра окончена, вы победили! \n Счёт: {stand_user} : {stand_comp}')
+                break
             print(f'Счёт:\t{stand_user} : {stand_comp}')
             print('Еще один выстрел')
         else:
@@ -221,6 +224,9 @@ while stand_comp < 10 and stand_user < 10:
     while helping_flag:  # стреляет комп
         if shoot_reached_or_not():
             stand_comp = stand_comp + 1
+            if stand_comp == 10:
+                print(f'Игра окончена, компьютер победил! \n Счёт: {stand_user} : {stand_comp}')
+                break
             print(f'Счёт:\t{stand_user} : {stand_comp}')
             print('Еще один выстрел')
         else:
